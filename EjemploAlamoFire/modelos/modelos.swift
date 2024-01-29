@@ -18,8 +18,24 @@ struct Categorias: Codable {
 
 // MARK: - Category
 struct Category: Codable {
-    let idCategory, strCategory: String
+    let idCategory: String
+    let strCategory: String
     let strCategoryThumb: String
     let strCategoryDescription: String
 }
+// MARK: - Meals
+struct Meals: Codable {
+    let meals: [Meal]
+}
+
+// MARK: - Meal
+struct Meal: Codable {
+    let strMeal: String
+    let strMealThumb: String
+    let idMeal: String
+    let strCategory: String!
+    let strArea: String!
+    let strInstructions: String!
+}
+
 
